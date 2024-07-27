@@ -49,3 +49,46 @@ show collections
 db.<collection_name>.drop()
 ```
 
+### 4. Document Operations
+
+##### Inserting Documents
+```shell
+db.<collection_name>.insertOne({
+    field1: "value1",
+    field2: "value2"
+})
+
+```
+##### Insert Multiple Documents
+```shell
+db.<collection_name>.insertMany([
+    { field1: "value1", field2: "value2" },
+    { field1: "value3", field2: "value4" }
+])
+
+```
+##### Find single document
+```shell
+db.<collection_name>.find({ query })
+```
+
+##### Find with specific query
+```shell
+db.<collection_name>.find({ field: "value" })
+```
+
+##### Updating a Document
+```shell
+db.<collection_name>.updateOne(
+    { query },
+    { $set: { field1: "new_value" } }
+)
+```
+
+
+##### Deleting Document 
+```shell
+db.<collection_name>.deleteOne({ query })
+db.<collection_name>.deleteMany({ query })
+
+```
